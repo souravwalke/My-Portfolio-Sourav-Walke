@@ -1,285 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>My Portfolio</title>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Sourav Girish Walke - Developer Portfolio"
+    />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content="Astro v3.5.5" />
+    <title>Sourav's Devfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:url" content="https://souravwalke.com" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:site_name"
+      content="Sourav Girish Walke - Developer Portfolio"
+    />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
-</head>
-<body>
-    <nav id="desktop-nav">
-        <div class="logo">SWalke</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-    <nav id="hamburger-nav">
-        <div class="logo">SWalke</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code&amp;family=McLaren&amp;family=Poppins:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  </head>
+  <body>
+    <!-- NavBar -->
+    <div class="navbar">
+      <div class="logo">
+        <img
+          src="./assets/sgw-logo.png"
+          alt="logoface"
+          class="logoface"
+          data-astro-cid-5blmo7yk=""
+        />
+        <a href="https://souravwalke.com">
+          <p class="sitename">Sourav Walke</p>
+        </a>
+      </div>
+      <div class="menu hide">
+        <a href="#about" class="menu-item menu-item-mobile exclude">Home</a>
+        <a href="#skills" class="menu-item menu-item-mobile exclude">Skills</a>
+        <a href="#timeline" class="menu-item menu-item-mobile exclude"
+          >Timeline</a
+        >
+        <a href="#projects" class="menu-item menu-item-mobile exclude"
+          >Projects</a
+        >
+        <a href="#contact" class="menu-item menu-item-mobile exclude">Contact</a>
+      </div>
+    </div>
+    <main>
+      <div class="hero">
+        <div class="hero-text">
+            <h4 style="font-family: Poppins, sans-serif">
+                Hi There! &nbsp;&nbsp;
+                <span class="wave">👋</span>
+                </br>
+                <span class="type"><span class="color-effect" style="font-family: Poppins, sans-serif">I'm Sourav Walke</span></span>
+                <br/>
+                <span class="font-effect" style="font-family: Poppins, sans-serif">I am a Full Stack Engineer.</span>
+            </h4>
+            <p style="font-family: Poppins, sans-serif;">Seasoned engineer with over 3 years of hands-on experience.
+            </br>
+            Crafting web solutions that are not just functional, but truly stack-tacular! 
+            </p>
+            <div class="hero-cta">
+                <a class="secondary-button social-media-btn linkedin" href="#">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a class="secondary-button social-media-btn github" href="#">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="./assets/SouravGirish_Walke_Resume.pdf" class="primary-button primary-text-contrast highlight-toolbar" style="color: rgb(12, 13, 14); font-family: Poppins, sans-serif;" download>Resume</a>
+                <a href="#contact" class="secondary-button" style="font-family: Poppins, sans-serif;">Get In Touch</a>
             </div>
-            <div class="menu-links">
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-            </div>
-        </div>
-    </nav>
-    <section id="profile">
-        <div class="section_pic-container">
-            <img src="./assets/profile-pic.png" alt="Sourav Walke Profile Picture" />
-        </div>
-        <div class="section_text">
-            <p class="section_text_p1">Hello, I'm</p>
-            <h1 class="title">Sourav Walke</h1>
-            <p class="section_text_p2">Full Stack Developer</p>
-            <div class="btn-container">
-                <button class="btn btn-color-2" onclick="window.open('./assets/SouravGirishWalke-Resume.pdf')">
-                    Download CV
-                </button>
-                <button class="btn btn-color-1" onclick="location.href='./#contact'">
-                   Contact Me
-                </button>
-            </div>
-            <div id="socials-container">
-                <img src="/assets/linkedin.png" alt="My LinkedIn Profile"
-                    class="icon" onclick="location.href='https://www.linkedin.com/in/souravwalke'" />
-                <img src="/assets/github.png" alt="My Github Profile"
-                    class="icon" onclick="location.href='https://www.github.com/in/souravwalke'" />    
-            </div>
-        </div>
-    </section>
-    <section id="about">
-        <p class="section_text_p1">Get To Know More</p>
-        <h1 class="title">About Me</h1>
-        <div class="section-container">
-            <div class="section_pic-container">
-                <img src="./assets/about-pic.png" alt="Profile Picture"
-                    class ="about-pic" />
-            </div>
-            <div class="about-details-container">
-                <div class="about-containers">
-                    <div class="details-container">
-                        <img src="./assets/experience.png" alt="Experience icon"
-                            class="icon" />
-                        <h3>Experience</h3>
-                        <p>3+ years </br>Full-Stack Development</p>
-                    </div>
-                    <div class="details-container">
-                        <img src="./assets/education.png" alt="Education icon"
-                            class="icon" />
-                        <h3>Education</h3>
-                        <p>Master of Science in Computer Science</br>Full-Stack Development</p>
-                    </div>
-                </div>
-                <div class="text-container">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque ea nostrum tempora reiciendis nobis quia obcaecati aspernatur quod id quisquam non ex voluptatum dolore illo accusamus enim, libero eos nulla!</p>
-                </div>
+            <div class="hero-scroll">
+                <svg width="23" height="33" viewBox="0 0 23 33" fill="none" style="height: 70%;"><rect x="0.767442" y="0.767442" width="20.7209" height="31.4651" rx="10.3605" stroke="var(--text)" stroke-width="1.53488"></rect> <rect x="9" y="8" width="4" height="8" rx="2" fill="var(--text)" data-astro-cid-j7pv25f6=""></rect> </svg> <small style="font-family: Poppins, sans-serif;">Scroll to see more sections</small>
             </div>
         </div>
-        <img src="./assets/arrow.png" alt="Arrow Icon" class="icon arrow" 
-            onclick="location.href='./#experience'" />
-    </section>
-    <section id="experience">
-        <p class="section_text_p1">Explore My</p>
-        <h1 class="title">Experience</h1>
-        <div class="experience-details-container">
-            <div class="about-containers">
-                <div class="details-container">
-                    <h2 class="experience-sub-title">Front End Development</h2>
-                    <div class="article-container">
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience Icon" class="icon" />
-                            <div>
-                                <h3>HTML</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience Icon" class="icon" />
-                            <div>
-                                <h3>CSS</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience Icon" class="icon" />
-                            <div>
-                                <h3>Java</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience Icon" class="icon" />
-                            <div>
-                                <h3>Javascript</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience Icon" class="icon" />
-                            <div>
-                                <h3>Python</h3>
-                                <p>Basic</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience Icon" class="icon" />
-                            <div>
-                                <h3>TypeScript</h3>
-                                <p>Basic</p>
-                            </div>
-                        </article>
-                    </div>
-               
-                </div>
-                <div class="details-container">
-                    <h2 class="experience-sub-title">Back End Development</h2>
-                    <div class="article-container">
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience Icon" class="icon" />
-                            <div>
-                                <h3>HTML</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience Icon" class="icon" />
-                            <div>
-                                <h3>CSS</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience Icon" class="icon" />
-                            <div>
-                                <h3>Java</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience Icon" class="icon" />
-                            <div>
-                                <h3>Javascript</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience Icon" class="icon" />
-                            <div>
-                                <h3>Python</h3>
-                                <p>Basic</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience Icon" class="icon" />
-                            <div>
-                                <h3>TypeScript</h3>
-                                <p>Basic</p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
+        <div class="hero-img">
+            <img src="./assets/my-img.png" alt="My Image">
         </div>
-        <img src="./assets/arrow.png" alt="Arrow Icon" class="icon arrow" 
-        onclick="location.href='./#experience'" />
-    </section>
-    <section id="projects">
-        <p class="section_text_p1">Browse My Recent</p>
-        <h1 class="title">Projects</h1>
-        <div class="experience-details-container">
-            <div class="about-containers">
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="./assets/project-1.png"
-                        alt="Project 1" class="project-img" />
-                </div>  
-                <h2 class="experience-sub-title project-title">Project One</h2>  
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://xyz.com'">
-                        Github
-                    </button>
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://xyz.com'">
-                        Live Demo
-                    </button>
-                </div>
-            </div>
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="./assets/project-3.png"
-                        alt="Project 3" class="project-img" />
-                </div>  
-                <h2 class="experience-sub-title project-title">Project Three</h2>  
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://xyz.com'">
-                        Github
-                    </button>
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://xyz.com'">
-                        Live Demo
-                    </button>
-                </div>
-            </div>
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="./assets/project-3.png"
-                        alt="Project 3" class="project-img" />
-                </div>  
-                <h2 class="experience-sub-title project-title">Project Three</h2>  
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://xyz.com'">
-                        Github
-                    </button>
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://xyz.com'">
-                        Live Demo
-                    </button>
-                </div>
-            </div>
-            </div>
-        </div>
-        <img src="./assets/arrow.png" alt="Arrow Icon" class="icon arrow" 
-        onclick="location.href='./#projects'" />
-    </section>
-    <section id="contact">
-        <p class="section_text_p1">Get In Touch</p>
-        <h1 class="title">Contact Me</h1>
-        <div class="contact-info-upper-container">
-            <div class="contact-info-container">
-                <img src="./assets/email.png"
-                    alt="Email Icon" class="icon contact-icon email-icon" />
-                <p><a href="mailto:souravgwalke@gmail.com">souravgwalke@gmail.com</a></p>
-            </div>
-            <div class="contact-info-container">
-                <img src="./assets/linkedin.png"
-                    alt="LinkedIn Icon" class="icon contact-icon" />
-                <p><a href="https://www.linkedin.com/in/souravwalke">LinkedIn</a></p>
-            </div>
-        </div>
-    </section>
-    <footer>
-        <nav>
-            <div class="nav-links-container">
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-        <p>Copyright &#169; 2023 Sourav Walke. All Rights Reserved</p>
-    </footer>
-    <script src ="script.js"></script>
-</body>
+      </div>
+    </main>
+  </body>
 </html>
